@@ -1,3 +1,4 @@
+
 from django.db import models
 from .const import COLORS
 from usuarios.models import Usuario
@@ -5,6 +6,9 @@ from usuarios.models import Usuario
 
 class Marca(models.Model):
     nome = models.CharField(max_length=70, null=False, blank=False)
+
+    def __str__(self):
+        return self.nome
 
 
 class Veiculo(models.Model):
