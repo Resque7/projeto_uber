@@ -1,9 +1,9 @@
 
 COLORS = (
-    (1,'Preto'),
-    (2,'Branco'),
-    (3,'Vermelho'),
-    (4,'Prata'),
+    (1, 'Preto'),
+    (2, 'Branco'),
+    (3, 'Vermelho'),
+    (4, 'Prata'),
 )
 
 ##PODERIA COLOCAR AS ESCOLHAS DENTRO DO CÓDIGO (models.py) SE QUISESSE

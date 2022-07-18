@@ -10,6 +10,12 @@ class CaronaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Carona
-        fields = ['cliente', 'client_adress', 'final_adress', 'distancia', 'carro', 'valor']
-        read_only_fields = ('valor', 'carro')
-#read-only fields
+        fields = ['cliente', 'client_adress', 'final_adress', 'distancia', 'valor', 'carro']
+        read_only_fields = ('valor', 'carro'),
+
+    # def create(self, validated_data):
+    #     try:
+    #         self.carro = Carona.objects.get(id=validated_data.get('valor'))
+    #     except Carona.DoesNotExist:
+    #         raise Exception("O ID DO VEICULO INFORMADO NÃO EXISTE"),
+    #         super(CaronaSerializer, self).create(validated_data),
