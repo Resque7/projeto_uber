@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect #MENSAGEM PARA RESPONDER SE O FORMS
 from django.shortcuts import render
 from django.urls import reverse
 
+from .filters import VeiculoFilter, MarcaFilter
 from .forms import CadastroVeiculo
 from .models import Veiculo, Marca
 
@@ -42,8 +43,10 @@ class VeiculoViewSet(viewsets.ModelViewSet):
     """
     queryset = Veiculo.objects.all()
     serializer_class = VeiculoSerializer
+    filter_class = VeiculoFilter
 
 
 class MarcaViewSet(viewsets.ModelViewSet):
     queryset = Marca.objects.all()
     serializer_class = MarcaSerializer
+    filter_class = MarcaFilter
